@@ -31,7 +31,7 @@ import static android.R.attr.staticWallpaperPreview;
 public class MainActivity extends AppCompatActivity {
 
     // TODO (1) Declare a TextView variable called mToysListTextView
-    TextView mToysLisTextView;
+    private TextView mToysLisTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +44,13 @@ public class MainActivity extends AppCompatActivity {
         String[] toyNames = ToyBox.getToyNames();
 
         // TODO (5) Loop through each toy and append the name to the TextView (add \n for spacing)
-        for(int i=0; i<toyNames.length; i++) {
-            mToysLisTextView.append(toyNames[i] + '\n');
+        //for(int i=0; i<toyNames.length; i++) {
+        for(String toy:toyNames){
+            mToysLisTextView.append(toy + '\n');
         }
-    }
+        /*for(int i=0; i<toyNames.length; i++) {
+        mToysLisTextView.append(toyNames[i] + '\n');
+    }*/
+
+}
 }
